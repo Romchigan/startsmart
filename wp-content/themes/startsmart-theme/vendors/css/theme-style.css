@@ -1,6 +1,3 @@
-header {
-  color: green; }
-
 @font-face {
   font-family: GillSans;
   src: url("../../fonts/GillSans.ttc"); }
@@ -12,6 +9,9 @@ header {
 @font-face {
   font-family: HKGrotesk-SemiBold;
   src: url("../../fonts/HKGrotesk-SemiBold.ttf"); }
+
+header {
+  color: green; }
 
 body {
   font-family: GillSans; }
