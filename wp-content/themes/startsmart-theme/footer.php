@@ -1,5 +1,6 @@
 
-	<footer class="site-footer">
+<?php if ( is_home() && ! is_front_page() ) : ?>
+    <footer class="site-footer">
         <div class="col-4">
             <img src="" alt="footer-logo">
 
@@ -10,7 +11,10 @@
         <div class="col-4">
 
         </div>
-	</footer>
+    </footer>
+
+<?php endif;?>
+
     </div><!-- #content -->
 </div><!-- #page -->
 
