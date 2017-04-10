@@ -1,25 +1,17 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package start-smart
- */
 
-?>
+	<footer class="site-footer">
+        <div class="col-4">
+            <img src="" alt="footer-logo">
 
-	</div><!-- #content -->
+        </div>
+        <div class="col-4">
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'start-smart' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'start-smart' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'start-smart' ), 'start-smart', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+        </div>
+        <div class="col-4">
+
+        </div>
+	</footer>
+    </div><!-- #content -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

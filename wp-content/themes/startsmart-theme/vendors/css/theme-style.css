@@ -13,5 +13,17 @@
 header {
   color: green; }
 
+.site-footer {
+  background-color: #f6f6f6; }
+
+html {
+  background-color: #f4f6f7; }
+
 body {
-  font-family: GillSans; }
+  font-family: GillSans;
+  background-color: #f4f6f7; }
+
+.page-content {
+  margin: 0 1% 1% 1%;
+  background-color: #fdfdfd;
+  box-shadow: 0 6px 20px 0 rgba(20, 38, 54, 0.18); }
