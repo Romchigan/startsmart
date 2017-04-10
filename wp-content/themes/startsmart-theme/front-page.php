@@ -1,4 +1,17 @@
 <?php /** Template Name: Homepage Themplate */ get_header(); ?>
+<div class="landing-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <img src="<?php echo get_theme_mod('landing-logo');?>" alt="landing-logo">
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h1 class="landing-title"><?php echo get_theme_mod('landing-title');?></h1>
+                <h4 class="landing-sub-title"><?php echo get_theme_mod('landing-sub-title');?></h4>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="page-content">
     <section class="about-us">
         <div class="container-fluid">
@@ -22,7 +35,7 @@
                     <div class="col-xs-12 col-md-4 subject text-center">
                         <div class="subject-img"><?php the_post_thumbnail(); ?></div>
                         <h3 class="subject-title"><?php the_title(); ?></h3>
-                        <p class="subject-content"><?php get_the_excerpt(); ?></p>
+                        <p class="subject-content"><?php the_excerpt(); ?></p>
                     </div>
                 <?php endwhile; endif; ?>
                 <?php wp_reset_query(); ?>
@@ -38,7 +51,7 @@
                     <div class="col-xs-12 col-md-4 member text-center">
                         <div class="member-photo"><?php the_post_thumbnail(); ?></div>
                         <h3 class="member-name"><?php the_title(); ?></h3>
-                        <p class="member-info"><?php get_the_excerpt(); ?></p>
+                        <p class="member-info"><?php the_excerpt(); ?></p>
                     </div>
                 <?php endwhile; endif; ?>
                 <?php wp_reset_query(); ?>
@@ -56,7 +69,7 @@
                         <div class="member-photo"><?php the_post_thumbnail(); ?></div>
                         <p class="recent-post-category"><?php get_the_category(); ?></p>
                         <h3 class="recent-post-title"><?php the_title(); ?></h3>
-                        <p class="recent-post-description"><?php get_the_excerpt(); ?></p>
+                        <p class="recent-post-description"><?php the_excerpt(); ?></p>
                     </div>
                 <?php endwhile; endif; ?>
                 <?php wp_reset_query(); ?>

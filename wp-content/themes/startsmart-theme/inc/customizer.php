@@ -9,6 +9,33 @@ function start_smart_customize_register( $wp_customize ) {
         'title'      => __( 'Контент головної сторінки', 'start-smart' ),
         'priority'   => 1,
     ) );
+    $wp_customize->add_setting( 'landing-title' , array(
+        'default'   => 'Landing title',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'landing-title', array(
+        'label'      => __( 'Landing title', 'start-smart' ),
+        'section'    => 'front-page',
+        'settings'   => 'landing-title',
+    ) ) );
+    $wp_customize->add_setting( 'landing-sub-title' , array(
+        'default'   => 'Landing sub title',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'landing-sub-title', array(
+        'label'      => __( 'Landing sub title', 'start-smart' ),
+        'section'    => 'front-page',
+        'settings'   => 'landing-sub-title',
+    ) ) );
+    $wp_customize->add_setting( 'landing-logo' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'landing-logo', array(
+        'label'      => __( 'Landing logo', 'start-smart' ),
+        'section'    => 'front-page',
+        'settings'   => 'landing-logo',
+    ) ) );
     $wp_customize->add_setting( 'about-us-title' , array(
         'default'   => 'About us',
         'transport' => 'refresh',
