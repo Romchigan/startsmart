@@ -58,6 +58,70 @@ function start_smart_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'start_smart_scripts' );
 
+add_action('init', 'add_subject_type');
+function add_subject_type()
+{
+    $labels = array(
+        'name' => _x('Subjects', 'post type general name'),
+        'singular_name' => _x('Subject', 'post type singular name'),
+        'add_new' => _x('Add New', 'Subject'),
+        'add_new_item' => __('Add New Subject'),
+        'edit_item' => __('Edit Subject'),
+        'new_item' => __('New Subject'),
+        'view_item' => __('View Subject'),
+        'search_items' => __('Search Subjects'),
+        'not_found' =>  __('No Subjects found'),
+        'not_found_in_trash' => __('No Subjects found in Trash'),
+        'parent_item_colon' => ''
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title','editor','thumbnail','excerpt','custom-fields','post-formats'),
+        'has_archive' => true
+    );
+    register_post_type('subject',$args);
+}
+
+add_action('init', 'add_member_type');
+function add_member_type()
+{
+    $labels = array(
+        'name' => _x('Members', 'post type general name'),
+        'singular_name' => _x('Member', 'post type singular name'),
+        'add_new' => _x('Add New', 'Member'),
+        'add_new_item' => __('Add New Member'),
+        'edit_item' => __('Edit Member'),
+        'new_item' => __('New Member'),
+        'view_item' => __('View Member'),
+        'search_items' => __('Search Members'),
+        'not_found' =>  __('No Members found'),
+        'not_found_in_trash' => __('No Members found in Trash'),
+        'parent_item_colon' => ''
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title','editor','thumbnail','excerpt','custom-fields','post-formats'),
+        'has_archive' => true
+    );
+    register_post_type('member',$args);
+}
+
 require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
