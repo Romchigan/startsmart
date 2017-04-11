@@ -171,11 +171,356 @@ function start_smart_customize_register( $wp_customize ) {
         'section'    => 'front-page',
         'settings'   => 'contact-form-title',
     ) ) );
+
+
+
+
+
+
+/* === Footer social customizer register === */
+    $wp_customize->add_section( 'footer_soc_section' , array(
+        'title'      => __( 'Footer Social Customizer', 'start-smart' ),
+        'priority'   => 20,
+    ) );
+
+    //  Show social links ?!
+    $wp_customize->add_setting( 'soc_chec' , array(
+        'default'   => 'true',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'soc_chec', array(
+        'label'       => __( 'Show Social links block?'),
+        'type'        => 'checkbox',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'soc_chec',
+    ) ) );
+
+
+    // VK link
+    $wp_customize->add_setting( 'vk_chec' , array(
+        'default'   => 'true',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'vk_chec', array(
+        'label'       => __( 'Show VK link?'),
+        'type'        => 'checkbox',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'vk_chec',
+    ) ) );
+
+    $wp_customize->add_setting( 'vk_link' , array(
+        'default'   => 'https://vk.com/',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'vk_link', array(
+        'label'       => __( 'Path to your VK'),
+        'type'        => 'text',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'vk_link',
+    ) ) );
+
+    // Facebook link
+    $wp_customize->add_setting( 'fb_chec' , array(
+        'default'   => 'true',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fb_chec', array(
+        'label'       => __( 'Show facebook link?'),
+        'type'        => 'checkbox',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'fb_chec',
+    ) ) );
+
+    $wp_customize->add_setting( 'fb_link' , array(
+        'default'   => 'https://www.facebook.com/',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fb_link', array(
+        'label'       => __( 'Path to your facebook'),
+        'type'        => 'text',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'fb_link',
+    ) ) );
+
+    // Instagram link
+    $wp_customize->add_setting( 'insta_chec' , array(
+        'default'   => 'true',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'insta_chec', array(
+        'label'       => __( 'Show Instagram link?'),
+        'type'        => 'checkbox',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'insta_chec',
+    ) ) );
+
+    $wp_customize->add_setting( 'insta_link' , array(
+        'default'   => 'https://www.instagram.com/',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'insta_link', array(
+        'label'       => __( 'Path to your Instagram'),
+        'type'        => 'text',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'insta_link',
+    ) ) );
+
+    // YouTube link
+    $wp_customize->add_setting( 'you_chec' , array(
+        'default'   => 'true',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'you_chec', array(
+        'label'       => __( 'Show YouTube link?'),
+        'type'        => 'checkbox',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'you_chec',
+    ) ) );
+
+    $wp_customize->add_setting( 'you_link' , array(
+        'default'   => 'https://www.youtube.com/',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'you_link', array(
+        'label'       => __( 'Path to your YouTube chanel'),
+        'type'        => 'text',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'you_link',
+    ) ) );
+
 }
 add_action( 'customize_register', 'start_smart_customize_register' );
 
+//
+//function start_smart_customize_preview_js() {
+//	wp_enqueue_script( 'start_smart_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+//}
+//add_action( 'customize_preview_init', 'start_smart_customize_preview_js' );
 
-function start_smart_customize_preview_js() {
-	wp_enqueue_script( 'start_smart_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
-}
-add_action( 'customize_preview_init', 'start_smart_customize_preview_js' );
+
+//
+// /* === Footer customizer register === */
+//function footer_start_smart_customize_register( $wp_customize ) {
+//
+////    /* === Header customizer register === */
+////    $wp_customize->add_section( 'new_header_section' , array(
+////        'title'     => __( 'Header Customizer', 'mytheme' ),
+////        'priority'  => 5,
+////    ) );
+////
+////    $wp_customize->add_setting( 'header_blog_name' , array(
+////        'default'   => 'MoZ',
+////        'transport' => 'refresh',
+////    ) );
+////
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'author_name', array(
+////        'label'     => __( 'Author name', 'Name' ),
+////        'type'      => 'text',
+////        'section'   => 'new_header_section',
+////        'settings'  => 'header_blog_name',
+////    ) ) );
+//
+////    /* === Footer social customizer register === */
+////    $wp_customize->add_section( 'footer_soc_section' , array(
+////        'title'      => __( 'Footer Social Customizer', 'mytheme' ),
+////        'priority'   => 20,
+////    ) );
+////
+////    //  Show social links ?!
+////    $wp_customize->add_setting( 'soc_chec' , array(
+////        'default'   => 'true',
+////        'transport' => 'refresh',
+////    ) );
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'soc_chec', array(
+////        'label'       => __( 'Show Social links block?'),
+////        'type'        => 'checkbox',
+////        'section'     => 'footer_soc_section',
+////        'settings'    => 'soc_chec',
+////    ) ) );
+////
+////
+////    // VK link
+////    $wp_customize->add_setting( 'vk_chec' , array(
+////        'default'   => 'true',
+////        'transport' => 'refresh',
+////    ) );
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'vk_chec', array(
+////        'label'       => __( 'Show VK link?'),
+////        'type'        => 'checkbox',
+////        'section'     => 'footer_soc_section',
+////        'settings'    => 'vk_chec',
+////    ) ) );
+////
+////    $wp_customize->add_setting( 'vk_link' , array(
+////        'default'   => 'https://vk.com/',
+////        'transport' => 'refresh',
+////    ) );
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'vk_link', array(
+////        'label'       => __( 'Path to your VK'),
+////        'type'        => 'text',
+////        'section'     => 'footer_soc_section',
+////        'settings'    => 'vk_link',
+////    ) ) );
+////
+////    // Facebook link
+////    $wp_customize->add_setting( 'fb_chec' , array(
+////        'default'   => 'true',
+////        'transport' => 'refresh',
+////    ) );
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fb_chec', array(
+////        'label'       => __( 'Show facebook link?'),
+////        'type'        => 'checkbox',
+////        'section'     => 'footer_soc_section',
+////        'settings'    => 'fb_chec',
+////    ) ) );
+////
+////    $wp_customize->add_setting( 'fb_link' , array(
+////        'default'   => 'https://www.facebook.com/',
+////        'transport' => 'refresh',
+////    ) );
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fb_link', array(
+////        'label'       => __( 'Path to your facebook'),
+////        'type'        => 'text',
+////        'section'     => 'footer_soc_section',
+////        'settings'    => 'fb_link',
+////    ) ) );
+////
+////    // Instagram link
+////    $wp_customize->add_setting( 'insta_chec' , array(
+////        'default'   => 'true',
+////        'transport' => 'refresh',
+////    ) );
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'insta_chec', array(
+////        'label'       => __( 'Show Instagram link?'),
+////        'type'        => 'checkbox',
+////        'section'     => 'footer_soc_section',
+////        'settings'    => 'insta_chec',
+////    ) ) );
+////
+////    $wp_customize->add_setting( 'insta_link' , array(
+////        'default'   => 'https://www.instagram.com/',
+////        'transport' => 'refresh',
+////    ) );
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'insta_link', array(
+////        'label'       => __( 'Path to your Instagram'),
+////        'type'        => 'text',
+////        'section'     => 'footer_soc_section',
+////        'settings'    => 'insta_link',
+////    ) ) );
+////
+////    // YouTube link
+////    $wp_customize->add_setting( 'you_chec' , array(
+////        'default'   => 'true',
+////        'transport' => 'refresh',
+////    ) );
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'you_chec', array(
+////        'label'       => __( 'Show YouTube link?'),
+////        'type'        => 'checkbox',
+////        'section'     => 'footer_soc_section',
+////        'settings'    => 'you_chec',
+////    ) ) );
+////
+////    $wp_customize->add_setting( 'you_link' , array(
+////        'default'   => 'https://www.youtube.com/',
+////        'transport' => 'refresh',
+////    ) );
+////    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'you_link', array(
+////        'label'       => __( 'Path to your YouTube chanel'),
+////        'type'        => 'text',
+////        'section'     => 'footer_soc_section',
+////        'settings'    => 'you_link',
+////    ) ) );
+//
+//
+//    /* === Contact-page customizer register === */
+//
+//    $wp_customize->add_section( 'contact_page' , array(
+//        'title'      => __( 'Contact Page Customizer', 'blogname' ),
+//        'priority'   => 30,
+//    ) );
+//
+//    // Contact title
+//    $wp_customize->add_setting( 'contact_title' , array(
+//        'default'   => '',
+//        'transport' => 'refresh',
+//    ) );
+//    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_title', array(
+//        'label'       => __( 'Contact title'),
+//        'type'        => 'text',
+//        'section'     => 'contact_page',
+//        'settings'    => 'contact_title',
+//    ) ) );
+//
+//    // Contact description
+//    $wp_customize->add_setting( 'contact_description' , array(
+//        'default'   => '',
+//        'transport' => 'refresh',
+//    ) );
+//    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_description', array(
+//        'label'       => __( 'Contact description'),
+//        'type'        => 'textarea',
+//        'section'     => 'contact_page',
+//        'settings'    => 'contact_description',
+//    ) ) );
+//
+//    // --- Contact info section ---
+//    $wp_customize->add_setting( 'cont_info_chec' , array(
+//        'default'   => 'true',
+//        'transport' => 'refresh',
+//    ) );
+//    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cont_info_chec', array(
+//        'label'       => __( 'Show contact info section?'),
+//        'type'        => 'checkbox',
+//        'section'     => 'contact_page',
+//        'settings'    => 'cont_info_chec',
+//    ) ) );
+//
+//    // Phone number
+//    $wp_customize->add_setting( 'phone_number' , array(
+//        'default'   => '123.456.7890',
+//        'transport' => 'refresh',
+//    ) );
+//    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'phone_number', array(
+//        'label'       => __( ' Your phone number'),
+//        'type'        => 'text',
+//        'section'     => 'contact_page',
+//        'settings'    => 'phone_number',
+//    ) ) );
+//
+//    // Contact info decription ( under phone number )
+//    $wp_customize->add_setting( 'cont_info_decript' , array(
+//        'default'   => '',
+//        'transport' => 'refresh',
+//    ) );
+//    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cont_info_decript-info-decription', array(
+//        'label'       => __( 'Contact info decription ( under phone number )'),
+//        'type'        => 'textarea',
+//        'section'     => 'contact_page',
+//        'settings'    => 'cont_info_decript',
+//    ) ) );
+//
+//    // Mail
+//    $wp_customize->add_setting( 'cont_info_mail' , array(
+//        'default'   => 'info@domain.com',
+//        'transport' => 'refresh',
+//    ) );
+//    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cont_info_mail', array(
+//        'label'       => __( ' Your mail'),
+//        'type'        => 'text',
+//        'section'     => 'contact_page',
+//        'settings'    => 'cont_info_mail',
+//    ) ) );
+//
+//    //WP_Customize_Image_Control
+//    $wp_customize->add_setting( 'cont_banner_img' , array(
+//        'transport' => 'refresh',
+//    ) );
+//    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cont_banner_img', array(
+//        'label'       => __( ' Chose banner image'),
+//        'section'     => 'contact_page',
+//        'settings'    => 'cont_banner_img',
+//    ) ) );
+//
+//}
+//add_action( 'customize_register', 'footer_start_smart_customize_register' );
+//
