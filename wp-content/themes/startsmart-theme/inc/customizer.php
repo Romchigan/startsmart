@@ -177,12 +177,36 @@ function start_smart_customize_register( $wp_customize ) {
 
 
 
-/* === Footer social customizer register === */
+/* === Footer customizer register === */
     $wp_customize->add_section( 'footer_soc_section' , array(
         'title'      => __( 'Footer Social Customizer', 'start-smart' ),
-        'priority'   => 20,
+        'priority'   => 30,
     ) );
 
+/* --- Footer courses block  --- */
+    $wp_customize->add_setting( 'footer_courses_title' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_courses_title', array(
+        'label'       => __( 'Courses title'),
+        'type'        => 'text',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'footer_courses_title',
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_courses_descript' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_courses_descript', array(
+        'label'       => __( 'Courses description'),
+        'type'        => 'text',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'footer_courses_descript',
+    ) ) );
+
+/* --- Footer social customizer  --- */
     //  Show social links ?!
     $wp_customize->add_setting( 'soc_chec' , array(
         'default'   => 'true',
@@ -193,6 +217,18 @@ function start_smart_customize_register( $wp_customize ) {
         'type'        => 'checkbox',
         'section'     => 'footer_soc_section',
         'settings'    => 'soc_chec',
+    ) ) );
+
+    // Social title
+    $wp_customize->add_setting( 'soc_title' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'soc_title', array(
+        'label'       => __( 'Social title'),
+        'type'        => 'text',
+        'section'     => 'footer_soc_section',
+        'settings'    => 'soc_title',
     ) ) );
 
 
