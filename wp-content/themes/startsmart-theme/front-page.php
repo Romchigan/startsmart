@@ -80,21 +80,37 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6">
-                    <h2 class="learning-title"><?php echo get_theme_mod('contact-us-section-title');?></h2>
-                    <p class="recent-posts-description"><?php echo get_theme_mod('contact-us-section-description');?></p>
-                    <div class="address">
-                        <h6 class="address-title"><?php echo get_theme_mod('address-title');?></h6>
-                        <p class="address-info"><?php echo get_theme_mod('address-info');?></p>
-                    </div>
-                    <div class="message-us">
-                        <h6 class="message-us-title"><?php echo get_theme_mod('message-us-title');?></h6>
-                        <p class="message-us-mail"><?php echo get_theme_mod('message-us-mail');?></p>
-                        <p class="message-us-social"><?php echo get_theme_mod('message-us-social');?></p>
-                    </div>
-                </div>
+                    <h2 class="section-heading"><?php echo get_theme_mod('contact-us-section-title');?></h2>
+                    <p class="section-description contact-us-description"><?php echo get_theme_mod('contact-us-section-description');?></p>
+                   <div class="row">
+										 <div class="col-1 pr-0">
+											 <img src="<?php echo get_template_directory_uri() . '/vendors/images/contact-us/marker.svg'; ?>" alt="address" width="22" class="contact-us-icon">
+										 </div>
+										 <div class="col-11">
+											 <div class="address">
+												 <h6 class="section-sub-heading"><?php echo get_theme_mod('address-title');?></h6>
+												 <p class="section-description"><?php echo get_theme_mod('address-info');?></p>
+											 </div>
+										 </div>
+									 </div>
+									<div class="row">
+										<div class="col-1 pr-0">
+											<img src="<?php echo get_template_directory_uri() . '/vendors/images/contact-us/mail.svg'; ?>" alt="mail" width="25" class="contact-us-icon">
+										</div>
+										<div class="col-11">
+											<div class="message-us">
+												<h6 class="section-sub-heading"><?php echo get_theme_mod('message-us-title');?></h6>
+												<p class="section-description message-us-mail"><?php echo get_theme_mod('message-us-mail');?></p>
+												<p class="section-description mb-0"><?php echo get_theme_mod('message-us-social');?></p>
+											</div>
+										</div>
+									</div>
+								</div>
                 <div class="col-xs-12 col-md-6">
-                    <h6 class="message-us-title"><?php echo get_theme_mod('contact-form-title');?></h6>
-                    <?php echo do_shortcode( '[contact-form-7 id="28" title="Contact form"]' ); ?>
+                   <div class="message-us-container">
+										 <h6 class="section-sub-heading mb-0"><?php echo get_theme_mod('contact-form-title');?></h6>
+                       <?php echo do_shortcode( '[contact-form-7 id="28" title="Contact form"]' ); ?>
+									 </div>
                 </div>
             </div>
         </div>

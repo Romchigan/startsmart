@@ -1,0 +1,59 @@
+.contact-us
+  &-section
+    padding: 120px 0 190px
+  &-description
+    width: 90%
+    margin-bottom: 40px
+  &-icon
+    margin-top: 6px
+.address
+  //padding-left: 40px
+  margin-bottom: 50px
+  width: 80%
+  .section-sub-heading
+    margin-bottom: 5px
+  .section-description
+    margin-bottom: 0
+
+
+.message-us
+  .section-sub-heading
+    margin-bottom: 5px
+  &-mail
+    margin-bottom: 5px
+  &-container
+    @include border-radius(8px)
+    background-color: #fffdfd
+    box-shadow: 2px 15px 17px 0 rgba(0, 0, 0, 0.25);
+    padding: 12% 6% 12% 8%;
+
+/* Contact form styles */
+div.wpcf7
+  padding-top: 25px
+.wpcf7
+  &-text
+    width: 95%
+    @media only screen and (max-width: 479px)
+      width: 100%
+      margin-bottom: 40px
+  &-textarea
+    resize: none
+    height: 40px
+    margin: 70px 0 60px
+
+
+input[type="text"],input[type="email"], textarea
+  border: none
+  border-bottom: solid 2px #979797
+  @include border-radius(0)
+  outline: none
+  color: #000
+  &::-webkit-input-placeholder
+    color: #8d8d8d
+  &::-moz-placeholder
+      color: #8d8d8d
+  &:focus
+    border-bottom: 2px solid $blue
+
+
+
