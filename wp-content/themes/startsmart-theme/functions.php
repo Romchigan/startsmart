@@ -130,6 +130,11 @@ function add_member_type()
     register_post_type('member',$args);
 }
 
+function custom_excerpt_length( $length ) {
+    return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
