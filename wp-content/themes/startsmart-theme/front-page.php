@@ -14,7 +14,7 @@
 </div>
 <div class="page-content">
     <section class="about-us">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
                     <h2 class="about-us-title"><?php echo get_theme_mod('about-us-title');?></h2>
@@ -27,7 +27,7 @@
         </div>
     </section>
     <section class="learning">
-        <div class="container-fluid">
+        <div class="container">
             <h2 class="learning-title text-center"><?php echo get_theme_mod('learning-title');?></h2>
             <div class="row">
                 <?php query_posts('post_type=subject&posts_per_page=3'); ?>
@@ -43,7 +43,7 @@
         </div>
     </section>
     <section  class="team">
-        <div class="container-fluid">
+        <div class="container">
             <h2 class="team-title text-center"><?php echo get_theme_mod('team-title');?></h2>
             <div class="row">
                 <?php query_posts('post_type=member&posts_per_page=3'); ?>
@@ -59,7 +59,7 @@
         </div>
     </section>
     <section class="recent-posts">
-        <div class="container-fluid">
+        <div class="container">
             <h2 class="recent-posts-title text-center"><?php echo get_theme_mod('recent-posts-title');?></h2>
             <p class="recent-posts-description text-center"><?php echo get_theme_mod('recent-posts-description');?></p>
             <div class="row">
