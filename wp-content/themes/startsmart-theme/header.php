@@ -34,8 +34,8 @@
             <div class="landing-header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <img src="<?php echo get_theme_mod('landing-logo');?>" alt="landing-logo">
+                        <div class="col-xs-12 col-md-6 landing-logo">
+                            <img src="<?php echo get_theme_mod('landing-logo');?>" alt="landing-logo" class="">
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <h1 class="landing-title"><?php echo get_theme_mod('landing-title');?></h1>
