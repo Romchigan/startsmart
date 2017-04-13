@@ -22,7 +22,7 @@
                 <?php query_posts('post_type=post&posts_per_page=3'); ?>
                 <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
                     <div class="col-xs-12 col-md-4 recent-post section-description">
-                        <div class="recent-post-img"><?php the_post_thumbnail(); ?></div>
+												<a href="<?php the_permalink(); ?>"><div class="recent-post-img"><?php the_post_thumbnail(); ?></div></a>
                         <?php the_category(); ?>
                         <a href="<?php the_permalink();?>" class="recent-post-title"><h3 class="section-sub-heading"><?php the_title(); ?></h3></a>
                         <p class="recent-post-description"><?php the_excerpt(); ?></p>
