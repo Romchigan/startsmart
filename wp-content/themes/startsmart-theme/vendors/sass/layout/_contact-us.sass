@@ -22,10 +22,12 @@
   &-mail
     margin-bottom: 5px
   &-container
+    @media (max-width: 768px)
+      margin-top: 40px
     @include border-radius(8px)
     background-color: #fffdfd
-    box-shadow: 2px 15px 17px 0 rgba(0, 0, 0, 0.25);
-    padding: 12% 6% 12% 8%;
+    box-shadow: 2px 15px 17px 0 rgba(0, 0, 0, 0.25)
+    padding: 12% 6% 12% 8%
 
 /* Contact form styles */
 div.wpcf7
@@ -33,7 +35,7 @@ div.wpcf7
 .wpcf7
   &-text
     width: 95%
-    @media only screen and (max-width: 479px)
+    @media only screen and (max-width: 768px)
       width: 100%
       margin-bottom: 40px
   &-textarea
@@ -43,6 +45,7 @@ div.wpcf7
 
 
 input[type="text"],input[type="email"], textarea
+  background-color: #fffdfd
   border: none
   border-bottom: solid 2px #979797
   @include border-radius(0)
