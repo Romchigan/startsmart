@@ -42,6 +42,12 @@
         text-decoration: none;
         color: #000; }
 
+.content-header {
+  padding: 10% 2%; }
+  .content-header h1 {
+    font-family: GillSans, sans-serif;
+    font-weight: normal; }
+
 .site-footer {
   background-color: #f6f6f6; }
 
@@ -244,15 +250,23 @@ input[type="text"], input[type="email"], textarea {
   font: 600 24px GillSans, sans-serif;
   color: #107bbf; }
 
-.landing-title {
+.header-title {
   font: bold 94px/0.95 HKGrotesk-Bold, sans-serif;
   letter-spacing: -1px;
   color: #107bbf; }
 
-.landing-sub-title {
+.header-sub-title {
   font: 400 42px GillSans, sans-serif;
   font-style: italic;
   color: #8a8a8a; }
+
+.recent-posts-blog-page-title {
+  font: normal 94px/0.95 GillSans, sans-serif; }
+
+.single-post-page-content {
+  padding: 8%; }
+  .single-post-page-content h1, .single-post-page-content h2, .single-post-page-content h3, .single-post-page-content h4, .single-post-page-content h5 {
+    color: #107bbf; }
 
 html {
   background-color: #f4f6f7; }

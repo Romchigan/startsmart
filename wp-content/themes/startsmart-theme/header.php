@@ -38,13 +38,17 @@
                             <img src="<?php echo get_theme_mod('landing-logo');?>" alt="landing-logo" class="">
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <h1 class="landing-title"><?php echo get_theme_mod('landing-title');?></h1>
-                            <h4 class="landing-sub-title"><?php echo get_theme_mod('landing-sub-title');?></h4>
+                            <h1 class="header-title"><?php echo get_theme_mod('landing-title');?></h1>
+                            <h4 class="header-sub-title"><?php echo get_theme_mod('landing-sub-title');?></h4>
                         </div>
                     </div>
                 </div>
             </div>
         <?php else : ?>
+            <div class="content-header">
+                <h1 class="header-title text-center"><?php the_title();?></h1>
+                <h4 class="header-sub-title text-center"><?php echo get_theme_mod('landing-sub-title');?></h4>
+            </div>
         <?php endif; ?>
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">
