@@ -14,7 +14,27 @@ header {
   color: green; }
 
 .site-footer {
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  padding-top: 50px; }
+  .site-footer h6 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: HKGrotesk-Bold;
+    letter-spacing: -.2px; }
+
+.section-heading {
+  font: bold 82px HKGrotesk-Bold, sans-serif;
+  letter-spacing: -2px;
+  color: #107bbf; }
+
+.section-description {
+  font: 100 20px GillSans, sans-serif;
+  line-height: 1.35;
+  color: #484848; }
+
+.section-sub-heading {
+  font: 600 24px GillSans, sans-serif;
+  color: #107bbf; }
 
 html {
   background-color: #f4f6f7; }
