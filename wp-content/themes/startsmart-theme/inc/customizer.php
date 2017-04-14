@@ -90,6 +90,15 @@ function start_smart_customize_register( $wp_customize ) {
         'section'    => 'front-page',
         'settings'   => 'recent-posts-title',
     ) ) );
+    $wp_customize->add_setting( 'recent-posts-blog-page-title' , array(
+        'default'   => 'Recent posts title',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'recent-posts-blog-page-title', array(
+        'label'      => __( 'Recent posts on blog page title', 'start-smart' ),
+        'section'    => 'front-page',
+        'settings'   => 'recent-posts-blog-page-title',
+    ) ) );
     $wp_customize->add_setting( 'recent-posts-description' , array(
         'default'   => 'Recent posts description',
         'transport' => 'refresh',
@@ -173,10 +182,6 @@ function start_smart_customize_register( $wp_customize ) {
     ) ) );
 
 
-
-
-
-
 /* === Footer customizer register === */
     $wp_customize->add_section( 'footer_soc_section' , array(
         'title'      => __( 'Footer Social Customizer', 'start-smart' ),
@@ -205,6 +210,7 @@ function start_smart_customize_register( $wp_customize ) {
         'section'     => 'footer_soc_section',
         'settings'    => 'footer_courses_descript',
     ) ) );
+
 
 /* --- Footer social customizer  --- */
     //  Show social links ?!
