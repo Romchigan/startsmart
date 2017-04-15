@@ -4,12 +4,12 @@
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-lg-5 col-md-12 courses">
                         <img src="<?php echo get_template_directory_uri() . '/vendors/images/icons/logo-footer.svg'; ?>" alt="footer-logo">
                         <h6><?php echo get_theme_mod( 'footer_courses_title', 'Курси особистих якостей.' ); ?></h6>
                         <p><?php echo get_theme_mod( 'footer_courses_descript', 'Aenean commodo lorem ipsum dolor' ); ?></p>
                     </div>
-                    <div class="col-4 dev-block">
+                    <div class="col-lg-4 col-md-7 dev-block">
                         <h6><?php echo __( 'Розробка:' );?></h6>
                         <p><?php echo __( 'Сайт розроблений на курсах GeekHub' );?></p>
                         <p>
@@ -25,7 +25,7 @@
                             <?php echo __( 'Богдан Токарський, Михайло Озірний, Роман Красніков' );?>
                         </p>
                     </div>
-                    <div class="col-3 soc-block">
+                    <div class="col-lg-3 col-md-5 soc-block">
                         <h6><?php echo get_theme_mod( 'soc_title', 'Ми в соц. мережах' ); ?></h6>
                         <?php
                         if( get_theme_mod( 'soc_chec' ) == true ) : ?>
