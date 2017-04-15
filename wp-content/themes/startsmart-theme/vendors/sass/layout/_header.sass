@@ -1,10 +1,16 @@
 .site-header
   background: url("http://startsmart.ho.ua/wp-content/uploads/2017/04/lines-3@3x.png") no-repeat
   background-size: cover
-
+#site-navigation
+  position: fixed
+  left: 0
+  right: 0
+  z-index: 100
+  padding: 1% 6% 1%;
+  background-color: #f4f5f6
 .landing
   &-header
-    padding: 10% 0
+    padding: 12% 0
   &-logo
     margin-bottom: 5%
     padding-bottom: 60px
@@ -19,19 +25,41 @@
       left: 0
 
 #primary-menu
-  padding: 3% 0
-  float: right
+  padding: 1% 0 1%
+  text-align: center
   li
-    margin-left: 30px
+    margin-left: 60px
     a
       color: #a7a7a7
       font-size: 20px
       &:hover
         text-decoration: none
         color: #000
+      &:focus
+        outline: none
+        text-decoration: none
+
+#primary-menu li a.active
+  color: #000
 
 .content-header
   padding: 10% 2%
   h1
     font-family: GillSans, sans-serif
     font-weight: normal
+
+
+@media (min-width:992px)
+.navbar-toggleable-md .navbar-collapse
+  justify-content: flex-end
+
+.navbar-light .navbar-toggler
+  position: relative
+  border: none
+  outline: none
+  float: right
+.fa-bars
+  font-size: 35px
+  color: $blue
+.nav-btn-wrap
+  float: right

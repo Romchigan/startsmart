@@ -45,12 +45,13 @@ add_action( 'widgets_init', 'start_smart_widgets_init' );
 function start_smart_scripts() {
 	wp_enqueue_style( 'start-smart-style', get_stylesheet_uri() );
     wp_enqueue_style( 'start-smart-bootstrap-css', get_template_directory_uri() . '/vendors/node_modules/bootstrap/dist/css/bootstrap.css');
+    wp_enqueue_style( 'start-smart-font-awesome', get_template_directory_uri() . '/vendors/node_modules/font-awesome/css/font-awesome.min.css');
     wp_enqueue_style( 'start-smart-theme-style', get_template_directory_uri() . '/vendors/css/theme-style.css');
 	wp_enqueue_script( 'start-smart-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'start-smart-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
     wp_enqueue_script( 'start-smart-jquery', get_template_directory_uri() . '/vendors/node_modules/jquery/dist/jquery.min.js', array(), '20151215', true );
     wp_enqueue_script( 'start-smart-tether', get_template_directory_uri() . '/vendors/node_modules/tether/dist/js/tether.min.js', array(), '20151215', true );
-    wp_enqueue_script( 'start-smart-bootstrap-js', get_template_directory_uri() . '/vendors/node_modules/bootstrap/dist/js/bootstrap.min.js', array(), '20151215', true );
+    //wp_enqueue_script( 'start-smart-bootstrap-js', get_template_directory_uri() . '/vendors/node_modules/bootstrap/dist/js/bootstrap.min.js', array(), '20151215', true );
 
 
     //add bootstrap from CDN
@@ -140,3 +141,4 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
