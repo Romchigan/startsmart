@@ -18,9 +18,7 @@
   background-color: #f6f6f6;
   padding: 50px 0; }
   .site-footer h6 {
-    font-size: 20px;
-    font-weight: 600;
-    font-family: HKGrotesk-Bold, sans-serif;
+    font: 600 20px HKGrotesk-Bold, sans-serif;
     letter-spacing: -.2px; }
   .site-footer p {
     margin-bottom: 0;
@@ -33,18 +31,19 @@
   .site-footer a:hover {
     text-decoration: none; }
   .site-footer .courses {
-    padding-left: 50px;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     position: relative; }
+    .site-footer .courses-description {
+      padding-left: 15px; }
     .site-footer .courses img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 45px;
       height: auto; }
-    @media (max-width: 768px) {
-      .site-footer .courses .dev-block {
-        padding-left: 50px; } }
+
+.dev-block {
+  margin-bottom: 20px; }
+  @media (max-width: 768px) {
+    .dev-block {
+      padding-left: 50px; } }
 
 .about-us {
   padding-top: 10%;

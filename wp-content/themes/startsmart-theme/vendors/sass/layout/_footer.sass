@@ -3,10 +3,7 @@
   padding: 50px 0
 
   h6
-    //font: 600 20px HKGrotesk-Bold
-    font-size: 20px
-    font-weight: 600
-    font-family: HKGrotesk-Bold, sans-serif
+    font: 600 20px HKGrotesk-Bold, sans-serif
     letter-spacing: -.2px
 
   p
@@ -23,17 +20,15 @@
     text-decoration: none
 
   .courses
-    padding-left: 50px
-    padding-bottom: 20px
+    margin-bottom: 20px
     position: relative
-
+    &-description
+      padding-left: 15px
     img
-      position: absolute
-      top: 0
-      left: 0
       width: 45px
       height: auto
 
-    .dev-block
-      @media (max-width: 768px)
-        padding-left: 50px
+.dev-block
+    margin-bottom: 20px
+    @media (max-width: 768px)
+      padding-left: 50px
