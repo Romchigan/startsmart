@@ -89,9 +89,9 @@
             <div class="row">
                 <?php query_posts('post_type=question&posts_per_page=6'); ?>
                 <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
-                    <div class="col-xs-12 col-md-7 question">
+                    <div class="col-xs-12 col-md-7 question section-description">
                         <h3 class="section-sub-heading"><?php the_title(); ?></h3>
-                        <p class="question-description section-description"><?php the_content(); ?></p>
+                        <?php the_content(); ?>
                     </div>
                 <?php endwhile; endif; ?>
                 <?php wp_reset_query(); ?>

@@ -41,6 +41,7 @@
                     </div>
                 <?php else : ?>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <a href="<?php echo get_site_url();?>"><img src="<?php echo get_theme_mod('landing-logo');?>" alt="landing-logo" class="menu-logo float-left hidden-lg-down" width="70px" height="54px"></a>
                         <?php wp_nav_menu( array(
                             'theme_location' => 'menu-2',
                             'container'      => '',
@@ -57,7 +58,7 @@
 							<div class="container">
 									<div class="row">
 											<div class="col-xs-12 col-md-12 col-lg-6 col-xl-6 landing-logo">
-													<img src="<?php echo get_theme_mod('landing-logo');?>" alt="landing-logo" class="">
+													<img src="<?php echo get_theme_mod('landing-logo');?>" alt="landing-logo">
 											</div>
 											<div class="col-xs-12 col-md-12 col-lg-6 col-xl-6">
 													<h1 class="header-title"><?php echo get_theme_mod('landing-title');?></h1>
@@ -69,7 +70,7 @@
 			<?php else : ?>
 					<div class="content-header">
 							<h1 class="header-title text-center"><?php the_title();?></h1>
-							<h4 class="header-sub-title text-center"><?php echo get_theme_mod('landing-sub-title');?></h4>
+							<h4 class="header-sub-title text-center"><?php while ( have_posts() ) : the_post(); the_author(); endwhile;?> — <?php echo get_the_date('d F Y');?></h4>
 					</div>
 			<?php endif; ?>
 	</header><!-- #masthead -->

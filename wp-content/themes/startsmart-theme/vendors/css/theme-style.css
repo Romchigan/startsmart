@@ -11,228 +11,6 @@
   font-family: HKGrotesk-SemiBold;
   src: url("../../fonts/HKGrotesk-SemiBold.ttf"); }
 
-.site-header {
-  background: url("http://startsmart.ho.ua/wp-content/uploads/2017/04/lines-3@3x.png") no-repeat;
-  background-size: cover; }
-
-.site-footer {
-  background-color: #f6f6f6;
-  padding: 50px 0; }
-  .site-footer h6 {
-    font-size: 20px;
-    font-weight: 600;
-    font-family: HKGrotesk-Bold, sans-serif;
-    letter-spacing: -.2px; }
-  .site-footer p {
-    margin-bottom: 0;
-    font-size: 14px;
-    line-height: 1.43;
-    color: #8a8a8a;
-    font-family: GillSans, sans-serif; }
-    .site-footer p span {
-      font-weight: 600; }
-  .site-footer a:hover {
-    text-decoration: none; }
-  .site-footer .courses {
-    padding-left: 50px;
-    padding-bottom: 20px;
-    position: relative; }
-    .site-footer .courses img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 45px;
-      height: auto; }
-    @media (max-width: 768px) {
-      .site-footer .courses .dev-block {
-        padding-left: 50px; } }
-
-.about-us {
-  padding-top: 10%;
-  padding-bottom: 10%; }
-  .about-us-image {
-    width: 100%; }
-  .about-us-title {
-    margin-bottom: 1%; }
-
-.contact-us-section {
-  padding: 10% 0 10%;
-  background-color: #fbfbfb;
-  background-image: url("http://startsmart.ho.ua/wp-content/uploads/2017/04/Снимок-экрана-2017-04-17-в-21.18.47.png");
-  background-size: 15px; }
-
-.contact-us-description {
-  width: 90%;
-  margin-bottom: 40px; }
-
-.contact-us-icon {
-  margin-top: 6px; }
-
-.address {
-  margin-bottom: 50px;
-  width: 80%; }
-  .address .section-sub-heading {
-    margin-bottom: 5px; }
-  .address .section-description {
-    margin-bottom: 0; }
-
-.message-us .section-sub-heading {
-  margin-bottom: 5px; }
-
-.message-us-mail {
-  margin-bottom: 5px; }
-
-.message-us-container {
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  border-radius: 8px;
-  background-color: #fffdfd;
-  box-shadow: 2px 15px 17px 0 rgba(0, 0, 0, 0.25);
-  padding: 12% 6% 12% 8%; }
-  @media (max-width: 992px) {
-    .message-us-container {
-      margin-top: 40px; } }
-
-/* Contact form styles */
-div.wpcf7 {
-  padding-top: 25px; }
-
-.wpcf7-text {
-  width: 95%; }
-  @media only screen and (max-width: 768px) {
-    .wpcf7-text {
-      width: 100%;
-      margin-bottom: 40px; } }
-
-.wpcf7-textarea {
-  resize: none;
-  height: 40px;
-  margin: 70px 0 60px; }
-
-input[type="text"], input[type="email"], textarea {
-  background-color: #fffdfd;
-  border: none;
-  border-bottom: solid 2px #979797;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  border-radius: 0;
-  outline: none;
-  color: #000; }
-  input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: #8d8d8d; }
-  input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder, textarea::-moz-placeholder {
-    color: #8d8d8d; }
-  input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-    border-bottom: 2px solid #107bbf; }
-
-.learning {
-  padding-top: 10%;
-  padding-bottom: 10%; }
-  .learning-title {
-    margin-bottom: 4%; }
-
-.subject {
-  padding: 0 3%; }
-  .subject-title {
-    margin-top: 10px; }
-  @media (max-width: 768px) {
-    .subject {
-      margin-bottom: 4%; }
-      .subject:last-child {
-        margin-bottom: 0; } }
-  .subject-img {
-    width: 100%; }
-    .subject-img img {
-      width: 150px;
-      height: 150px; }
-
-.team {
-  background-color: #fafafa;
-  padding-top: 10%;
-  padding-bottom: 10%; }
-  .team-title {
-    margin-bottom: 2%; }
-
-@media (max-width: 768px) {
-  .member {
-    margin-bottom: 4%; }
-    .member:last-child {
-      margin-bottom: 0; } }
-
-.member-photo {
-  margin-bottom: 15px; }
-  .member-photo img {
-    border-radius: 50%;
-    width: 165px;
-    height: 165px;
-    box-shadow: 0 12px 40px -9px rgba(0, 0, 0, 0.75); }
-
-.recent-posts {
-  background-color: #fafafa;
-  padding-top: 10%;
-  padding-bottom: 10%; }
-  .recent-posts-description {
-    padding: 0 20%;
-    margin-bottom: 3%; }
-    @media (max-width: 768px) {
-      .recent-posts-description {
-        padding: 0; } }
-
-@media (max-width: 768px) {
-  .recent-post {
-    margin-bottom: 4%; }
-    .recent-post:last-child {
-      margin-bottom: 0; } }
-
-.recent-post-img {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 16px 14px 44px -9px rgba(0, 0, 0, 0.75); }
-  .recent-post-img img {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    min-height: 100%;
-    box-shadow: 16px 14px 44px -9px rgba(0, 0, 0, 0.75); }
-
-.recent-post-title h3:hover {
-  color: #334bbf; }
-
-.recent-post-title:hover {
-  text-decoration: none; }
-
-.post-categories {
-  list-style: none;
-  padding: 0;
-  margin: 5% 0 0 0; }
-  .post-categories li {
-    display: inline-block;
-    margin-right: 5px; }
-    .post-categories li:last-child {
-      margin-right: 0; }
-  .post-categories a {
-    color: #8a8a8a;
-    font-size: 12px;
-    text-transform: uppercase; }
-    .post-categories a:hover {
-      text-decoration: none;
-      color: black; }
-
-.gallery-section {
-  padding-top: 10%; }
-
-.faq-section {
-  padding-top: 10%;
-  padding-bottom: 10%; }
-
 .wpcf7-form input[type="submit"] {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
@@ -357,6 +135,250 @@ input[type="text"], input[type="email"], textarea {
 .single-post-page-content {
   padding: 8%; }
   .single-post-page-content h1, .single-post-page-content h2, .single-post-page-content h3, .single-post-page-content h4, .single-post-page-content h5 {
+    color: #107bbf; }
+
+.site-header {
+  background: url("http://startsmart.ho.ua/wp-content/uploads/2017/04/lines-3@3x.png") no-repeat;
+  background-size: cover; }
+
+.menu-logo {
+  position: absolute;
+  left: 60px; }
+
+.site-footer {
+  background-color: #f6f6f6;
+  padding: 50px 0; }
+  .site-footer h6 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: HKGrotesk-Bold, sans-serif;
+    letter-spacing: -.2px; }
+  .site-footer p {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #8a8a8a;
+    font-family: GillSans, sans-serif; }
+    .site-footer p span {
+      font-weight: 600; }
+  .site-footer a:hover {
+    text-decoration: none; }
+  .site-footer .courses {
+    padding-left: 50px;
+    padding-bottom: 20px;
+    position: relative; }
+    .site-footer .courses img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45px;
+      height: auto; }
+    @media (max-width: 768px) {
+      .site-footer .courses .dev-block {
+        padding-left: 50px; } }
+
+.about-us {
+  padding-top: 10%;
+  padding-bottom: 10%; }
+  .about-us-image {
+    width: 100%; }
+  .about-us-title {
+    margin-bottom: 1%; }
+
+.contact-us-section {
+  padding: 10% 0 10%;
+  background-color: #fbfbfb;
+  background-image: url("http://startsmart.ho.ua/wp-content/uploads/2017/04/Снимок-экрана-2017-04-17-в-21.18.47.png");
+  background-size: 15px; }
+
+.contact-us-description {
+  width: 90%;
+  margin-bottom: 40px; }
+
+.contact-us-icon {
+  margin-top: 6px; }
+
+.address {
+  margin-bottom: 50px;
+  width: 80%; }
+  .address .section-sub-heading {
+    margin-bottom: 5px; }
+  .address .section-description {
+    margin-bottom: 0; }
+
+.message-us .section-sub-heading {
+  margin-bottom: 5px; }
+
+.message-us-mail {
+  margin-bottom: 5px; }
+
+.message-us-container {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #fffdfd;
+  box-shadow: 2px 15px 17px 0 rgba(0, 0, 0, 0.25);
+  padding: 12% 6% 12% 8%; }
+  @media (max-width: 992px) {
+    .message-us-container {
+      margin-top: 40px; } }
+
+/* Contact form styles */
+div.wpcf7 {
+  padding-top: 25px; }
+
+.wpcf7-text {
+  width: 95%; }
+  @media only screen and (max-width: 768px) {
+    .wpcf7-text {
+      width: 100%;
+      margin-bottom: 40px; } }
+
+.wpcf7-textarea {
+  resize: none;
+  height: 40px;
+  margin: 70px 0 60px; }
+
+input[type="text"], input[type="email"], textarea {
+  background-color: #fffdfd;
+  border: none;
+  border-bottom: solid 2px #979797;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  color: #000; }
+  input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #8d8d8d; }
+  input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder, textarea::-moz-placeholder {
+    color: #8d8d8d; }
+  input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-bottom: 2px solid #107bbf; }
+
+.learning {
+  padding-top: 10%;
+  padding-bottom: 10%; }
+  .learning-title {
+    margin-bottom: 4%; }
+
+.subject {
+  padding: 0 3%; }
+  .subject-title {
+    margin-top: 10px; }
+  @media (max-width: 992px) {
+    .subject {
+      margin-bottom: 4%; }
+      .subject:last-child {
+        margin-bottom: 0; } }
+  .subject-img {
+    width: 100%; }
+    .subject-img img {
+      width: 150px;
+      height: 150px; }
+
+.team {
+  background-color: #fafafa;
+  padding-top: 10%;
+  padding-bottom: 10%; }
+  .team-title {
+    margin-bottom: 2%; }
+
+@media (max-width: 992px) {
+  .member {
+    margin-bottom: 4%; }
+    .member:last-child {
+      margin-bottom: 0; } }
+
+.member-photo {
+  margin-bottom: 15px; }
+  .member-photo img {
+    border-radius: 50%;
+    width: 165px;
+    height: 165px;
+    box-shadow: 0 12px 40px -9px rgba(0, 0, 0, 0.75); }
+
+.recent-posts {
+  background-color: #fafafa;
+  padding-top: 10%;
+  padding-bottom: 10%; }
+  .recent-posts-description {
+    padding: 0 20%;
+    margin-bottom: 3%; }
+    @media (max-width: 992px) {
+      .recent-posts-description {
+        padding: 0; } }
+
+@media (max-width: 992px) {
+  .recent-post {
+    margin-bottom: 4%; }
+    .recent-post:last-child {
+      margin-bottom: 0; } }
+
+.recent-post-img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 16px 14px 44px -9px rgba(0, 0, 0, 0.75); }
+  .recent-post-img img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100%;
+    box-shadow: 16px 14px 44px -9px rgba(0, 0, 0, 0.75); }
+
+.recent-post-title h3:hover {
+  color: #334bbf; }
+
+.recent-post-title:hover {
+  text-decoration: none; }
+
+.post-categories {
+  list-style: none;
+  padding: 0;
+  margin: 5% 0 0 0; }
+  .post-categories li {
+    display: inline-block;
+    margin-right: 5px; }
+    .post-categories li:last-child {
+      margin-right: 0; }
+  .post-categories a {
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: uppercase; }
+    .post-categories a:hover {
+      text-decoration: none;
+      color: black; }
+
+.gallery-section {
+  padding-top: 10%; }
+
+.faq-section {
+  padding-top: 10%;
+  padding-bottom: 10%; }
+
+.faq-title {
+  margin-bottom: 4%;
+  font-family: GillSans, sans-serif;
+  font-weight: 300; }
+
+.question p {
+  padding-bottom: 20px;
+  border-bottom: solid 1px #f0f0f0;
+  margin-bottom: 20px; }
+
+.question a {
+  color: #107bbf; }
+  .question a:hover {
+    text-decoration: underline;
+    color: #107bbf; }
+  .question a:link, .question a:visited {
     color: #107bbf; }
 
 html {
