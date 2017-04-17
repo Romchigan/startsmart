@@ -18,6 +18,7 @@
   "homepage": "",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",

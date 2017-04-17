@@ -45,12 +45,13 @@ add_action( 'widgets_init', 'start_smart_widgets_init' );
 function start_smart_scripts() {
 	wp_enqueue_style( 'start-smart-style', get_stylesheet_uri() );
     wp_enqueue_style( 'start-smart-bootstrap-css', get_template_directory_uri() . '/vendors/node_modules/bootstrap/dist/css/bootstrap.css');
+    wp_enqueue_style( 'start-smart-font-awesome', get_template_directory_uri() . '/vendors/node_modules/font-awesome/css/font-awesome.min.css');
     wp_enqueue_style( 'start-smart-theme-style', get_template_directory_uri() . '/vendors/css/theme-style.css');
 	wp_enqueue_script( 'start-smart-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'start-smart-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
     wp_enqueue_script( 'start-smart-jquery', get_template_directory_uri() . '/vendors/node_modules/jquery/dist/jquery.min.js', array(), '20151215', true );
     wp_enqueue_script( 'start-smart-tether', get_template_directory_uri() . '/vendors/node_modules/tether/dist/js/tether.min.js', array(), '20151215', true );
-    wp_enqueue_script( 'start-smart-bootstrap-js', get_template_directory_uri() . '/vendors/node_modules/bootstrap/dist/js/bootstrap.min.js', array(), '20151215', true );
+    //wp_enqueue_script( 'start-smart-bootstrap-js', get_template_directory_uri() . '/vendors/node_modules/bootstrap/dist/js/bootstrap.min.js', array(), '20151215', true );
 
 
     //add bootstrap from CDN
@@ -130,6 +131,39 @@ function add_member_type()
     register_post_type('member',$args);
 }
 
+add_action('init', 'add_question_type');
+function add_question_type()
+{
+    $labels = array(
+        'name' => _x('Questions', 'post type general name'),
+        'singular_name' => _x('Question', 'post type singular name'),
+        'add_new' => _x('Add New', 'Question'),
+        'add_new_item' => __('Add New Question'),
+        'edit_item' => __('Edit Question'),
+        'new_item' => __('New Question'),
+        'view_item' => __('View Question'),
+        'search_items' => __('Search Questions'),
+        'not_found' =>  __('No Questions found'),
+        'not_found_in_trash' => __('No Questions found in Trash'),
+        'parent_item_colon' => ''
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title','editor','thumbnail','excerpt','custom-fields','post-formats'),
+        'has_archive' => true
+    );
+    register_post_type('question',$args);
+}
+
+
 function custom_excerpt_length( $length ) {
     return 15;
 }
@@ -140,3 +174,4 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';

@@ -81,6 +81,24 @@ function start_smart_customize_register( $wp_customize ) {
         'section'    => 'front-page',
         'settings'   => 'team-title',
     ) ) );
+    $wp_customize->add_setting( 'gallery-title' , array(
+        'default'   => 'Gallery',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'gallery-title', array(
+        'label'      => __( 'Gallery title', 'start-smart' ),
+        'section'    => 'front-page',
+        'settings'   => 'gallery-title',
+    ) ) );
+    $wp_customize->add_setting( 'gallery-description' , array(
+        'default'   => 'gallery description',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'gallery-description', array(
+        'label'      => __( 'Gallery description', 'start-smart' ),
+        'section'    => 'front-page',
+        'settings'   => 'gallery-description',
+    ) ) );
     $wp_customize->add_setting( 'recent-posts-title' , array(
         'default'   => 'Recent posts title',
         'transport' => 'refresh',
@@ -107,6 +125,15 @@ function start_smart_customize_register( $wp_customize ) {
         'label'      => __( 'Recent posts description', 'start-smart' ),
         'section'    => 'front-page',
         'settings'   => 'recent-posts-description',
+    ) ) );
+    $wp_customize->add_setting( 'faq-title' , array(
+        'default'   => 'FAQ',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'faq-title', array(
+        'label'      => __( 'Faq title', 'start-smart' ),
+        'section'    => 'front-page',
+        'settings'   => 'faq-title',
     ) ) );
     $wp_customize->add_setting( 'contact-us-section-title' , array(
         'default'   => 'Get in touch',
