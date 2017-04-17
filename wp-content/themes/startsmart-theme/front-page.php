@@ -57,6 +57,14 @@
             </div>
         </div>
     </section>
+    <section  id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="gallery-title text-center section-heading"><?php echo get_theme_mod('gallery-title');?></h2>
+            <p class="gallery-description text-center section-description"><?php echo get_theme_mod('gallery-description');?></p>
+            <div class="row">
+            </div>
+        </div>
+    </section>
     <section id="blog" class="recent-posts">
         <div class="container">
             <h2 class="recent-posts-title text-center section-heading"><?php echo get_theme_mod('recent-posts-title');?></h2>
@@ -65,10 +73,25 @@
                 <?php query_posts('post_type=post&posts_per_page=3'); ?>
                 <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
                     <div class="col-xs-12 col-md-4 recent-post section-description">
-												<a href="<?php the_permalink(); ?>"><div class="recent-post-img"><?php the_post_thumbnail(); ?></div></a>
+                        <a href="<?php the_permalink(); ?>"><div class="recent-post-img"><?php the_post_thumbnail(); ?></div></a>
                         <?php the_category(); ?>
                         <a href="<?php the_permalink();?>" class="recent-post-title"><h3 class="section-sub-heading"><?php the_title(); ?></h3></a>
                         <p class="recent-post-description"><?php the_excerpt(); ?></p>
+                    </div>
+                <?php endwhile; endif; ?>
+                <?php wp_reset_query(); ?>
+            </div>
+        </div>
+    </section>
+    <section  id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="faq-title text-center section-heading"><?php echo get_theme_mod('faq-title');?></h2>
+            <div class="row">
+                <?php query_posts('post_type=question&posts_per_page=6'); ?>
+                <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
+                    <div class="col-xs-12 col-md-7 question">
+                        <h3 class="section-sub-heading"><?php the_title(); ?></h3>
+                        <p class="question-description section-description"><?php the_content(); ?></p>
                     </div>
                 <?php endwhile; endif; ?>
                 <?php wp_reset_query(); ?>

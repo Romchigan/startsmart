@@ -131,6 +131,39 @@ function add_member_type()
     register_post_type('member',$args);
 }
 
+add_action('init', 'add_question_type');
+function add_question_type()
+{
+    $labels = array(
+        'name' => _x('Questions', 'post type general name'),
+        'singular_name' => _x('Question', 'post type singular name'),
+        'add_new' => _x('Add New', 'Question'),
+        'add_new_item' => __('Add New Question'),
+        'edit_item' => __('Edit Question'),
+        'new_item' => __('New Question'),
+        'view_item' => __('View Question'),
+        'search_items' => __('Search Questions'),
+        'not_found' =>  __('No Questions found'),
+        'not_found_in_trash' => __('No Questions found in Trash'),
+        'parent_item_colon' => ''
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title','editor','thumbnail','excerpt','custom-fields','post-formats'),
+        'has_archive' => true
+    );
+    register_post_type('question',$args);
+}
+
+
 function custom_excerpt_length( $length ) {
     return 15;
 }

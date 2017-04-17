@@ -230,6 +230,7 @@ input[type="text"], input[type="email"], textarea {
     box-shadow: 0 12px 40px -9px rgba(0, 0, 0, 0.75); }
 
 .recent-posts {
+  background-color: #fafafa;
   padding-top: 10%;
   padding-bottom: 10%; }
   .recent-posts-description {
@@ -284,6 +285,13 @@ input[type="text"], input[type="email"], textarea {
     .post-categories a:hover {
       text-decoration: none;
       color: black; }
+
+.gallery-section {
+  padding-top: 10%; }
+
+.faq-section {
+  padding-top: 10%;
+  padding-bottom: 10%; }
 
 .wpcf7-form input[type="submit"] {
   -webkit-border-radius: 100px;
