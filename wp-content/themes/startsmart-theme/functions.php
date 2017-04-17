@@ -9,7 +9,9 @@ function start_smart_setup() {
 	add_theme_support( 'post-thumbnails' );
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'start-smart' ),
+        'menu-2' => esc_html__( 'Single menu', 'start-smart' ),
 	) );
+
 	add_theme_support( 'html5', array(
 		'search-form',
 		'comment-form',

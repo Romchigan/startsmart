@@ -28,16 +28,29 @@
 						<i class="fa fa-bars" aria-hidden="true"></i>
 					</button>
 				</div>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<?php wp_nav_menu( array(
-								'theme_location' => 'menu-1',
-								'container'      => '',
-								'menu_class'     => 'nav navbar-nav',
-								'menu_id'        => 'primary-menu',
-								'walker'  => new BootstrapNavMenuWalker(),
-						) );
-						?>
-				</div>
+                <?php if ( is_front_page() ) : ?>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <?php wp_nav_menu( array(
+                            'theme_location' => 'menu-1',
+                            'container'      => '',
+                            'menu_class'     => 'nav navbar-nav',
+                            'menu_id'        => 'primary-menu',
+                            'walker'  => new BootstrapNavMenuWalker(),
+                        ) );
+                        ?>
+                    </div>
+                <?php else : ?>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <?php wp_nav_menu( array(
+                            'theme_location' => 'menu-2',
+                            'container'      => '',
+                            'menu_class'     => 'nav navbar-nav',
+                            'menu_id'        => 'single-post-menu',
+                            'walker'  => new BootstrapNavMenuWalker(),
+                        ) );
+                        ?>
+                    </div>
+                <?php endif; ?>
 			</nav>
 			<?php if ( is_front_page() ) : ?>
 					<div class="landing-header">

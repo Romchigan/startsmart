@@ -14,70 +14,6 @@
   background: url("http://startsmart.ho.ua/wp-content/uploads/2017/04/lines-3@3x.png") no-repeat;
   background-size: cover; }
 
-#site-navigation {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  padding: 1% 6% 1%;
-  background-color: #f4f5f6; }
-
-.landing-header {
-  padding: 12% 0; }
-
-.landing-logo {
-  margin-bottom: 5%;
-  padding-bottom: 60px;
-  position: relative; }
-  .landing-logo:after {
-    content: "";
-    position: absolute;
-    width: 90%;
-    bottom: 0;
-    height: 10%;
-    background: radial-gradient(ellipse at center, #c9d9e5 0%, rgba(201, 217, 229, 0) 64%);
-    left: 0; }
-
-#primary-menu {
-  padding: 1% 0 1%;
-  text-align: center; }
-  #primary-menu li {
-    margin-left: 60px; }
-    #primary-menu li a {
-      color: #a7a7a7;
-      font-size: 20px; }
-      #primary-menu li a:hover {
-        text-decoration: none;
-        color: #000; }
-      #primary-menu li a:focus {
-        outline: none;
-        text-decoration: none; }
-
-#primary-menu li a.active {
-  color: #000; }
-
-.content-header {
-  padding: 10% 2%; }
-  .content-header h1 {
-    font-family: GillSans, sans-serif;
-    font-weight: normal; }
-
-.navbar-toggleable-md .navbar-collapse {
-  justify-content: flex-end; }
-
-.navbar-light .navbar-toggler {
-  position: relative;
-  border: none;
-  outline: none;
-  float: right; }
-
-.fa-bars {
-  font-size: 35px;
-  color: #107bbf; }
-
-.nav-btn-wrap {
-  float: right; }
-
 .site-footer {
   background-color: #f6f6f6;
   padding: 50px 0; }
@@ -305,10 +241,89 @@ input[type="text"], input[type="email"], textarea {
   outline: none;
   padding: 2.5% 10.5%; }
 
+#site-navigation {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1% 6% 1%;
+  background-color: #f4f5f6; }
+
+.landing-header {
+  padding: 12% 0; }
+
+.landing-logo {
+  margin-bottom: 5%;
+  padding-bottom: 60px;
+  position: relative; }
+  .landing-logo:after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    height: 10%;
+    background: radial-gradient(ellipse at center, #c9d9e5 0%, rgba(201, 217, 229, 0) 64%);
+    left: 0; }
+
+#single-post-menu,
+#primary-menu {
+  margin-left: 0;
+  padding: 1% 0 1%;
+  text-align: center; }
+  #single-post-menu li,
+  #primary-menu li {
+    margin-left: 60px; }
+    @media (max-width: 768px) {
+      #single-post-menu li,
+      #primary-menu li {
+        margin-left: 0; } }
+    #single-post-menu li a,
+    #primary-menu li a {
+      color: #a7a7a7;
+      font-size: 20px; }
+      #single-post-menu li a:hover,
+      #primary-menu li a:hover {
+        text-decoration: none;
+        color: #000; }
+      #single-post-menu li a:focus,
+      #primary-menu li a:focus {
+        outline: none;
+        text-decoration: none; }
+
+#single-post-menu li a.active,
+#primary-menu li a.active {
+  color: #000; }
+
+.content-header {
+  padding: 10% 2%; }
+  .content-header h1 {
+    font-family: GillSans, sans-serif;
+    font-weight: normal; }
+
+@media (min-width: 992px) {
+  .navbar-toggleable-md .navbar-collapse {
+    justify-content: flex-end; } }
+
+.navbar-light .navbar-toggler {
+  position: relative;
+  border: none;
+  outline: none;
+  float: right; }
+
+.fa-bars {
+  font-size: 35px;
+  color: #107bbf; }
+
+.nav-btn-wrap {
+  float: right; }
+
 .section-heading {
   font: bold 82px HKGrotesk-Bold, sans-serif;
   letter-spacing: -2px;
   color: #107bbf; }
+  @media (max-width: 992px) {
+    .section-heading {
+      font-size: 50px; } }
 
 .section-description {
   font: 100 20px GillSans, sans-serif;
@@ -323,6 +338,9 @@ input[type="text"], input[type="email"], textarea {
   font: bold 94px/0.95 HKGrotesk-Bold, sans-serif;
   letter-spacing: -1px;
   color: #107bbf; }
+  @media (max-width: 992px) {
+    .header-title {
+      font-size: 60px; } }
 
 .header-sub-title {
   font: 400 42px GillSans, sans-serif;
