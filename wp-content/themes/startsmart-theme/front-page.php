@@ -89,9 +89,9 @@
             <div class="row">
                 <?php query_posts('post_type=question&posts_per_page=6'); ?>
                 <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
-                    <div class="col-xs-12 col-md-7 question">
+                    <div class="col-xs-12 col-md-7 question section-description">
                         <h3 class="section-sub-heading"><?php the_title(); ?></h3>
-                        <p class="question-description section-description"><?php the_content(); ?></p>
+                        <?php the_content(); ?>
                     </div>
                 <?php endwhile; endif; ?>
                 <?php wp_reset_query(); ?>
@@ -101,7 +101,7 @@
     <section id="contact-us" class="contact-us-section">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-lg-6">
                     <h2 class="section-heading"><?php echo get_theme_mod('contact-us-section-title');?></h2>
                     <p class="section-description contact-us-description"><?php echo get_theme_mod('contact-us-section-description');?></p>
                    <div class="row">
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-lg-6">
                     <div class="message-us-container">
                         <h6 class="section-sub-heading mb-0"><?php echo get_theme_mod('contact-form-title');?></h6>
                         <?php echo do_shortcode( '[contact-form-7 id="28" title="Contact form"]' ); ?>
