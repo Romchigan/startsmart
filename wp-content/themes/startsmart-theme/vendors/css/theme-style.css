@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: GillSans;
   src: url("../../fonts/GillSans.ttc"); }
@@ -55,8 +56,10 @@
     margin-bottom: 1%; }
 
 .contact-us-section {
-  padding: 120px 0 190px;
-  background-color: #fbfbfb; }
+  padding: 10% 0 10%;
+  background-color: #fbfbfb;
+  background-image: url("http://startsmart.ho.ua/wp-content/uploads/2017/04/Снимок-экрана-2017-04-17-в-21.18.47.png");
+  background-size: 15px; }
 
 .contact-us-description {
   width: 90%;
@@ -87,7 +90,7 @@
   background-color: #fffdfd;
   box-shadow: 2px 15px 17px 0 rgba(0, 0, 0, 0.25);
   padding: 12% 6% 12% 8%; }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .message-us-container {
       margin-top: 40px; } }
 

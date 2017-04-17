@@ -101,7 +101,7 @@
     <section id="contact-us" class="contact-us-section">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-lg-6">
                     <h2 class="section-heading"><?php echo get_theme_mod('contact-us-section-title');?></h2>
                     <p class="section-description contact-us-description"><?php echo get_theme_mod('contact-us-section-description');?></p>
                    <div class="row">
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-lg-6">
                     <div class="message-us-container">
                         <h6 class="section-sub-heading mb-0"><?php echo get_theme_mod('contact-form-title');?></h6>
                         <?php echo do_shortcode( '[contact-form-7 id="28" title="Contact form"]' ); ?>
