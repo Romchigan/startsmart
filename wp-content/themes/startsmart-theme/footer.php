@@ -5,15 +5,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-md-12 courses">
-
 											<div class="d-flex justify-content-start align-items-start">
-												<img src="<?php echo get_template_directory_uri() . '/vendors/images/icons/logo-footer.svg'; ?>" alt="footer-logo">
+												<a href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri() . '/vendors/images/icons/logo-footer.svg'; ?>" alt="footer-logo"></a>
 												<div class="courses-description">
 													<h6><?php echo get_theme_mod( 'footer_courses_title', 'Курси особистих якостей.' ); ?></h6>
 													<p><?php echo get_theme_mod( 'footer_courses_descript', 'Aenean commodo lorem ipsum dolor' ); ?></p>
 												</div>
 											</div>
-
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 dev-block">
                         <h6><?php echo __( 'Розробка:' );?></h6>
