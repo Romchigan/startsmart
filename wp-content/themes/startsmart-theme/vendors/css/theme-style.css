@@ -55,7 +55,8 @@
     margin-bottom: 1%; }
 
 .contact-us-section {
-  padding: 120px 0 190px; }
+  padding: 120px 0 190px;
+  background-color: #fbfbfb; }
 
 .contact-us-description {
   width: 90%;
@@ -323,7 +324,7 @@ input[type="text"], input[type="email"], textarea {
   color: #107bbf; }
   @media (max-width: 992px) {
     .section-heading {
-      font-size: 50px; } }
+      font-size: 40px; } }
 
 .section-description {
   font: 100 20px GillSans, sans-serif;

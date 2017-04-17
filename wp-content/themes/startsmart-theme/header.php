@@ -56,10 +56,10 @@
 					<div class="landing-header">
 							<div class="container">
 									<div class="row">
-											<div class="col-xs-12 col-md-6 landing-logo">
+											<div class="col-xs-12 col-md-12 col-lg-6 col-xl-6 landing-logo">
 													<img src="<?php echo get_theme_mod('landing-logo');?>" alt="landing-logo" class="">
 											</div>
-											<div class="col-xs-12 col-md-6">
+											<div class="col-xs-12 col-md-12 col-lg-6 col-xl-6">
 													<h1 class="header-title"><?php echo get_theme_mod('landing-title');?></h1>
 													<h4 class="header-sub-title"><?php echo get_theme_mod('landing-sub-title');?></h4>
 											</div>

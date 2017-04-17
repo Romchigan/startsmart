@@ -3,11 +3,11 @@
     <section id="about-us" class="about-us">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-xs-12 d-flex justify-content-end flex-column">
+                <div class="col-xs-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-end flex-column">
                     <h2 class="about-us-title section-heading"><?php echo get_theme_mod('about-us-title');?></h2>
                     <p class="about-us-description section-description"><?php echo get_theme_mod('about-us-description');?></p>
                 </div>
-                <div class="col-md-6 col-xs-12">
+                <div class="col-xs-12 col-md-12 col-lg-6 col-xl-6">
                     <img src="<?php echo get_theme_mod('about-us-image');?>" alt="about-us-image" class="about-us-image">
                 </div>
             </div>
@@ -19,7 +19,7 @@
             <div class="row">
                 <?php query_posts('post_type=subject&posts_per_page=3'); ?>
                 <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
-                    <div class="col-xs-12 col-md-4 subject text-center section-description">
+                    <div class="col-xs-12 col-lg-4 subject text-center section-description">
                         <div class="subject-img"><?php the_post_thumbnail(); ?></div>
                         <h3 class="subject-title section-sub-heading"><?php the_title(); ?></h3>
                         <p class="subject-content section-description"><?php the_excerpt(); ?></p>
@@ -35,7 +35,7 @@
             <div class="row">
                 <?php query_posts('post_type=member&posts_per_page=3'); ?>
                 <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
-                    <div class="col-xs-12 col-md-4 member text-center section-description">
+                    <div class="col-xs-12 col-lg-4 member text-center section-description">
                         <div class="member-photo"><?php the_post_thumbnail(); ?></div>
                         <h3 class="member-name section-sub-heading"><?php the_title(); ?></h3>
                         <p class="member-info section-description"><?php the_excerpt(); ?></p>
@@ -72,7 +72,7 @@
             <div class="row">
                 <?php query_posts('post_type=post&posts_per_page=3'); ?>
                 <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
-                    <div class="col-xs-12 col-md-4 recent-post section-description">
+                    <div class="col-xs-12 col-lg-4 recent-post section-description">
                         <a href="<?php the_permalink(); ?>"><div class="recent-post-img"><?php the_post_thumbnail(); ?></div></a>
                         <?php the_category(); ?>
                         <a href="<?php the_permalink();?>" class="recent-post-title"><h3 class="section-sub-heading"><?php the_title(); ?></h3></a>
