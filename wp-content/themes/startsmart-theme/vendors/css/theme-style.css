@@ -54,7 +54,7 @@
   text-align: center; }
   #single-post-menu li,
   #primary-menu li {
-    margin-left: 60px; }
+    margin-left: 30px; }
     @media (max-width: 768px) {
       #single-post-menu li,
       #primary-menu li {
@@ -379,6 +379,9 @@ input[type="text"], input[type="email"], textarea {
     color: #107bbf; }
   .question a:link, .question a:visited {
     color: #107bbf; }
+
+.error-section {
+  padding-top: 90px; }
 
 html {
   background-color: #f4f6f7; }

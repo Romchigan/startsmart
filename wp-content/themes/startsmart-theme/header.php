@@ -68,11 +68,15 @@
 							</div>
 					</div>
 			<?php else : ?>
-					<div class="content-header">
-							<h1 class="header-title text-center"><?php the_title();?></h1>
-							<h4 class="header-sub-title text-center"><?php while ( have_posts() ) : the_post(); the_author(); endwhile;?> — <?php echo get_the_date('d F Y');?></h4>
-					</div>
+
 			<?php endif; ?>
+
+            <?php if ( is_single()) : ?>
+                <div class="content-header">
+                    <h1 class="header-title text-center"><?php the_title();?></h1>
+                    <h4 class="header-sub-title text-center"><?php while ( have_posts() ) : the_post(); the_author(); endwhile;?> — <?php echo get_the_date('d F Y');?></h4>
+                </div>
+            <?php endif;?>
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">
 
