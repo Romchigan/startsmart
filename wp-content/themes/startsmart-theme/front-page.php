@@ -62,6 +62,7 @@
             <h2 class="gallery-title text-center section-heading"><?php echo get_theme_mod('gallery-title');?></h2>
             <p class="gallery-description text-center section-description"><?php echo get_theme_mod('gallery-description');?></p>
             <div class="row">
+                <?php echo do_shortcode('[supsystic-gallery id=1]') ?>
             </div>
         </div>
     </section>
