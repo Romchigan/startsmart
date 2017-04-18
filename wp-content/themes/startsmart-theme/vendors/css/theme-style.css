@@ -1,15 +1,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: GillSans;
-  src: url("../../fonts/GillSans.ttc"); }
+  src: url("../fonts/GillSans.ttc"); }
 
 @font-face {
   font-family: HKGrotesk-Bold;
-  src: url("../../fonts/HKGrotesk-Bold.ttf"); }
+  src: url("../fonts/HKGrotesk-Bold.ttf"); }
 
 @font-face {
   font-family: HKGrotesk-SemiBold;
-  src: url("../../fonts/HKGrotesk-SemiBold.ttf"); }
+  src: url("../fonts/HKGrotesk-SemiBold.ttf"); }
 
 .wpcf7-form input[type="submit"] {
   -webkit-border-radius: 100px;
