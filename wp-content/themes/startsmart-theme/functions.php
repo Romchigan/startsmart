@@ -171,6 +171,13 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+
+function start_smart_comment_reply_text( $link ) {
+    $link = str_replace( 'Reply', 'Відповісти', $link );
+    return $link;
+}
+add_filter( 'comment_reply_link', 'start_smart_comment_reply_text' );
+
 require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
