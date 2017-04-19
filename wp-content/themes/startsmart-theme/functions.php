@@ -165,18 +165,30 @@ function add_question_type()
     register_post_type('question',$args);
 }
 
+function startsmart_months( $date, $req_format ){
+    if( ! preg_match('~[FMlS]~', $req_format ) ) return $date;
+
+    $replace = array (
+        "січень" => "січня", "лютий" => "лютого", "березень" => "березня", "квітень" => "квітня", "травень" => "травня", "червень" => "червня", "липень" => "липня", "серпень" => "серпня", "вересень" => "вересня", "жовтень" => "жовтня", "листопад" => "листопада", "грудень" => "грудня",
+
+        "January" => " січня ", "February" => " лютого ", "March" => " березня ", "April" => " квітня ", "May" => " травня ", "June" => " червня ", "July" => " липня ", "August" => " серпня ", "September" => " вересня ", "October" => " жовтня ", "November" => " листопада ", "December" => " грудня ",
+
+        "Jan" => "січ.", "Feb" => "лют.", "Mar" => "бер.", "Apr" => "квіт.", "May" => "трав", "Jun" => "червня", "Jul" => "липня", "Aug" => "серпня", "Sep" => "вер.", "Oct" => "жовт.", "Nov" => "листопада", "Dec" => "груд.",
+
+        "Sunday" => "неділя", "Monday" => "понеділок", "Tuesday" => "вівторок", "Wednesday" => "середа", "Thursday" => "четвер", "Friday" => "п’ятница", "Saturday" => "субота",
+
+        "Sun" => "нед.", "Mon" => "пон.", "Tue" => "вт.", "Wed" => "ср.", "Thu" => "чет.", "Fri" => "птн.", "Sat" => "суб.", "th" => "", "st" => "", "nd" => "", "rd" => "",
+    );
+
+
+    return strtr( $date, $replace );
+}
+add_filter('date_i18n', 'startsmart_months', 11, 2);
 
 function custom_excerpt_length( $length ) {
     return 15;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-
-function start_smart_comment_reply_text( $link ) {
-    $link = str_replace( 'Reply', 'Відповісти', $link );
-    return $link;
-}
-add_filter( 'comment_reply_link', 'start_smart_comment_reply_text' );
 
 require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
