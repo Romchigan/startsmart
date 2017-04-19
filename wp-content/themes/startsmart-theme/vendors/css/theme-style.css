@@ -32,7 +32,10 @@
   background-color: #f4f5f6; }
 
 .landing-header {
-  padding: 12% 0; }
+  padding: 12% 0 6% 0; }
+  @media (max-width: 768px) {
+    .landing-header {
+      padding-top: 15%; } }
 
 .landing-logo {
   margin-bottom: 5%;
@@ -103,15 +106,24 @@
   font: bold 82px HKGrotesk-Bold, sans-serif;
   letter-spacing: -2px;
   color: #107bbf; }
+  @media (max-width: 992px) {
+    .section-heading {
+      font-size: 40px; } }
 
 .section-description {
   font: 100 20px GillSans, sans-serif;
   line-height: 1.35;
   color: #484848; }
+  @media (max-width: 992px) {
+    .section-description {
+      font-size: 15px; } }
 
 .section-sub-heading {
   font: 600 24px GillSans, sans-serif;
   color: #107bbf; }
+  @media (max-width: 992px) {
+    .section-sub-heading {
+      font-size: 19px; } }
 
 .header-title {
   font: bold 94px/0.95 HKGrotesk-Bold, sans-serif;
@@ -125,9 +137,15 @@
   font: 400 42px GillSans, sans-serif;
   font-style: italic;
   color: #8a8a8a; }
+  @media (max-width: 992px) {
+    .header-sub-title {
+      font-size: 30px; } }
 
 .recent-posts-blog-page-title {
   font: normal 94px/0.95 GillSans, sans-serif; }
+  @media (max-width: 992px) {
+    .recent-posts-blog-page-title {
+      font-size: 40px; } }
 
 .single-post-page-content {
   padding: 8%; }
